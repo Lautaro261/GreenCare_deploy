@@ -6,24 +6,24 @@ const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY } = process.env;
 
 /////// CONEXION CON BASE DE DATOS LOCAL ///////
-const sequelize = new Sequelize(
+/* const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/greencare`,
   {
     logging: false,
     native: false,
   }
 );
-
+ */
 /////// CONEXION CON BASE DE DATOS DEPLOY ///////
 
-/*  const sequelize = new Sequelize(
+ const sequelize = new Sequelize(
   DB_DEPLOY,
   {
     logging: false,
     native: false,
   }
 ); 
- */
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
